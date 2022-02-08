@@ -26,3 +26,9 @@ while z<=500000:
 #this is a second comment
 #this is a third comment
 #this is another comment
+
+
+"""
+This is a multi-line comment
+Right here
+"""
