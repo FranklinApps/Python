@@ -12,4 +12,7 @@ class User:
         self.account_balance -= amount
 
 guido = User ("Guido Cheetos", "Gueeds@Cheese.com")
+guido.make_deposit(850)
+guido.make_withdrawl(317.4)
 
+print(guido.account_balance)
