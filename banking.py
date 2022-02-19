@@ -4,4 +4,12 @@ class User:
         self.name = name
         self.email_address = email_address
         self.account_balance = 0
+    
+    def make_deposit(self, amount):
+        self.account_balance += amount
+    
+    def make_withdrawl(self, amount):
+        self.account_balance -= amount
+
+guido = User ("Guido Cheetos", "Gueeds@Cheese.com")
 
