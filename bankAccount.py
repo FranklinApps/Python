@@ -33,10 +33,27 @@ class BankAccount:
         for account in cls.accounts:
             account.display_all_accounts()
 
-savings = BankAccount(.04, 18000)
-checking = BankAccount(.01, 6000)
+class User: 
+    def __init__(self, name):
+        self.name = name
+        self.account = {
+            "savings" : BankAccount(.07, 2500),
+            "checking": BankAccount(.03, 1200)
+        }
 
-savings.deposit(40).deposit(460).deposit(250).withdraw(275).yield_intrest().display_account_info()
-checking.deposit(30).deposit(420).deposit(69).withdraw(1275).yield_intrest().display_account_info()
+    def display_user_balance(self):
+        print(f"Member: {self.name}, Checking Balance: {self.account['checking'].display_account_info()}")
+        print(f"Member: {self.name}, Savings Balance: {self.account['savings'].display_account_info()}")
+        return self
 
-BankAccount.display_all_accounts()
+    def transfer_money(self, amount, user):
+        self.amount -= amount
+        user.amount += amount
+        self.display_user_balance()
+        user.display_user_balance()
+        return self
+
+frank = User('Franklin')
+
+frank.account['checking'].deposit(1000)
+frank.display_user_balance()
