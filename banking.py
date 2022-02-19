@@ -1,19 +1,13 @@
 class User:
-    def __init__(self):
-        self.name = "Michael"
-        self.email = "michael@codingdojo.com"
+    bank_name = "Franklins Bank Foo"
+    def __init__(self, name, email_address):
+        self.name = name
+        self.email_address = email_address
         self.account_balance = 0
 
-User()
-guido = User()
-monty = User()
+guido = User("gudio", "gueeds@python.org")
+monty = User("monty", "soypython.grr")
 
-print(guido.name)
-print(monty.name)
-
-guido.name = "Guido"
-print(guido.name)
-
-monty.name = "Monty"
+print(guido.name,"  ", guido.email_address)
 print(monty.name)
 
